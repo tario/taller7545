@@ -12,6 +12,7 @@ class PreRegistration < ActiveRecord::Base
     unless self.confirm_token
       self.confirm_token = generate_confirm_token()
       self.confirmed = false
+      UserMailer.prereg_mail(self)
     end
   end
 end
