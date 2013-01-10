@@ -4,8 +4,8 @@ class PreRegistrationsController < ApplicationController
   end
 
   def create
-    pr = PreRegistration.new(:email => params[:pre_registration][:email])
-    pr.save
+    @preregistration = PreRegistration.new(:email => params[:pre_registration][:email])
+    @preregistration.save
   end
   
   def confirm
