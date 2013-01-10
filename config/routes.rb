@@ -38,7 +38,7 @@ Tallertest::Application.routes.draw do
   #       get 'recent', :on => :collection
   #     end
   #   end
-
+  resources :pre_registrations
   # Sample resource route within a namespace:
   #   namespace :admin do
   #     # Directs /admin/products/* to Admin::ProductsController
