@@ -38,6 +38,8 @@ Tallertest::Application.routes.draw do
   #       get 'recent', :on => :collection
   #     end
   #   end
+  match 'pre_registrations/confirm/:token' => 'pre_registrations#confirm', :as => :confirm_pre_registration
+  
   resources :pre_registrations
   # Sample resource route within a namespace:
   #   namespace :admin do
