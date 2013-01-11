@@ -1,32 +1,11 @@
-<%= form_for(@pre_registration) do |f| %>
-	<div id=outer>
-	<div id=middle>
-	  <div id='registration_square'>
-	  	<table>
-	  	  <tr>
-	  	  	<td class='icon_td'>
-			  <img class='icon_img' src='/images/valija.png' width="30%" height="30%">
-			  </img>	
-			</td>
-			<td>  	
 			  <div class='form_container'><p>
+
+<%= form_for(@pre_registration) do |f| %>
 			    Pre-registracion: las primeras 1000 registraciones obtendran una cuenta premium<br /><br />
 			    
 			    e-mail:
 			    <%= f.text_field :email %>
 			    <%= f.submit "Enviar" %>
+<% end %>
 			  </p>
 			  </div>
-			</td>
-	  	  	<td class='icon_td'>
-			  <img class='icon_img' src='/images/valija.png' width="30%" height="30%">
-			  </img>	
-			</td>
-		  </tr>
-		</table>
-	  </div>
-    </div>
-    </div>
-<% end %>
-
-

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tallertest</title>
+  <%= stylesheet_link_tag    "application" %>
+  <style>
+  body {
+	background-image:url(<%= get_background_url %>);
+  } 
+  </style>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div id=outer>
+	<div id=middle>
+	  <div id='registration_square'>
+	  	<table>
+	  	  <tr>
+	  	  	<td class='icon_td'>
+			  <img class='icon_img' src='/images/valija.png' width="30%" height="30%">
+			  </img>	
+			</td>
+			<td>  	
+<%= yield %>
+
+			</td>
+	  	  	<td class='icon_td'>
+			  <img class='icon_img' src='/images/valija.png' width="30%" height="30%">
+			  </img>	
+			</td>
+		  </tr>
+		</table>
+	  </div>
+    </div>
+    </div>
+
+
+</body>
+</html>
