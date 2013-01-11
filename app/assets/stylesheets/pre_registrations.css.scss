@@ -4,5 +4,39 @@
 body {
   background-image:url('/background/01.jpg');
   background-size: 100% auto;
-} 
+}
 
+.form_container {
+}
+
+#outer {
+  height: 600px; 
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+}
+
+#middle {
+  position: absolute; 
+  top: 50%;
+}
+
+#inner {text-align: left;}
+
+#registration_square {
+  width: 100%;
+  margin: 0 auto;
+  border: 3px #008000 solid;
+  background-color: #FFFFFF;
+  position: relative;
+  vertical-align: center;
+  top: -50%;
+}
+
+.icon_td {
+text-align: center ; 
+}
+
+#pre_registration_email {
+  width: 60%;
+}
