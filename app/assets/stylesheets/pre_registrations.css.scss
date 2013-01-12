@@ -4,38 +4,16 @@
 body {
   background-image:url('/background/01.jpg');
   background-size: 100% auto;
+  height: 100%;
 }
 
-.form_container {
-}
-
-#outer {
-  height: 600px; 
-  width: 50%;
-  margin: 0 auto;
-  position: relative;
-}
-
-#middle {
-  position: absolute; 
-  top: 50%;
-}
-
-#inner {text-align: left;}
-
-#registration_square {
+html {
+  height: 100%;
   width: 100%;
-  margin: 0 auto;
-  border: 3px #008000 solid;
-  background-color: #FFFFFF;
-  position: relative;
-  vertical-align: center;
-  top: -50%;
 }
 
-.icon_td {
-text-align: center ; 
-  width: 20%;  
+#maindiv {
+  height: 100%;
 }
 
 .icon_img {
@@ -46,6 +24,28 @@ width: 50%;
   width: 60%;
 }
 
+#uppertrdiv {
+  height: 40%;
+}
+
+#centertr {
+  height: 20%;
+}
+
+#lefttddiv {
+  width: 25%;
+}
+
+.icon_td {
+text-align: center ; 
+  width: 10%;  
+}
+
+
 #center_cell{
-  width: 60%;  
+  width: 30%;  
+}
+
+#righttddiv {
+  width: 25%;
 }
