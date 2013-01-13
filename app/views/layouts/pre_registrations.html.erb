@@ -30,8 +30,8 @@ function rotate_background() {
     newimage.onload = function() {
 		var seconddiv = $("#seconddiv");
 		var firstdiv = $("#firstdiv");
-		seconddiv.css("background-image", firstdiv.css("background-image"));
 		seconddiv.css("opacity", 1.0);
+		seconddiv.css("background-image", firstdiv.css("background-image"));
 	    firstdiv.css("background-image", "url('"+newpath+"')");
 		seconddiv.animate({opacity: 0.0}, 3000);
 	}
