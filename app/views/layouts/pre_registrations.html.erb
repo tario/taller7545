@@ -30,10 +30,10 @@ function rotate_background() {
     newimage.onload = function() {
 		var seconddiv = $("#seconddiv");
 		var firstdiv = $("#firstdiv");
-		seconddiv.css("opacity", 1.0);
 		seconddiv.css("background-image", firstdiv.css("background-image"));
+		seconddiv.css("opacity", 1.0);
 	    firstdiv.css("background-image", "url('"+newpath+"')");
-		seconddiv.animate({opacity: 0.0}, 3000);
+		seconddiv.animate({opacity: 0.0}, 1500);
 	}
 	newimage.src = newpath;
 }
@@ -43,7 +43,7 @@ window.onload = function() {
 		function() {
 			rotate_background();
 		},
-		6000
+		5000
 	)	
 }
 
