@@ -2,15 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
-  background-image:url('/background/01.jpg');
-  background-size: 100% auto;
   height: 100%;
 }
 
-html {
+#firstdiv, #seconddiv {
+  background-size: 100% auto;
+}
+
+html, #firstdiv, #seconddiv, #lastdiv {
   height: 100%;
   width: 100%;
   overflow: hidden;
+}
+
+#firstdiv, #seconddiv, #lastdiv {
+  position: absolute;
+  top: 0px;
 }
 
 .icon_img {
