@@ -19,17 +19,23 @@ function next_background_image() {
 	
 	backgroundid++;
 	if (backgroundid>4) backgroundid = 1;
-	return "url('/background/0"+backgroundid+".jpg')";
+	return "/background/0"+backgroundid+".jpg";
 }
 
+
 function rotate_background() {
-	var seconddiv = $("#seconddiv");
-	var firstdiv = $("#firstdiv");
-	
-	seconddiv.css("background-image", firstdiv.css("background-image"));
-	seconddiv.css("opacity", 1.0);
-	firstdiv.css("background-image", next_background_image());
-	seconddiv.animate({opacity: 0.0}, 2000);
+	var newimage = new Image();
+	var newpath = next_background_image();
+
+    newimage.onload = function() {
+		var seconddiv = $("#seconddiv");
+		var firstdiv = $("#firstdiv");
+		seconddiv.css("background-image", firstdiv.css("background-image"));
+		seconddiv.css("opacity", 1.0);
+	    firstdiv.css("background-image", "url('"+newpath+"')");
+		seconddiv.animate({opacity: 0.0}, 3000);
+	}
+	newimage.src = newpath;
 }
 
 window.onload = function() {
@@ -37,7 +43,7 @@ window.onload = function() {
 		function() {
 			rotate_background();
 		},
-		5000
+		6000
 	)	
 }
 
