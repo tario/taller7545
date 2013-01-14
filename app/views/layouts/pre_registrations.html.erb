@@ -15,6 +15,8 @@
 <script>
 
 var backgroundid = 1;
+var frontbackground = 0;
+
 function next_background_image() {
 	
 	backgroundid++;
@@ -30,10 +32,14 @@ function rotate_background() {
     newimage.onload = function() {
 		var seconddiv = $("#seconddiv");
 		var firstdiv = $("#firstdiv");
-		seconddiv.css("background-image", firstdiv.css("background-image"));
-		seconddiv.css("opacity", 1.0);
-	    firstdiv.css("background-image", "url('"+newpath+"')");
-		seconddiv.animate({opacity: 0.0}, 1500);
+		if (frontbackground == 1) {
+		    firstdiv.css("background-image", "url('"+newpath+"')");
+			seconddiv.animate({opacity: 0.0}, 1500);
+		} else {
+		    seconddiv.css("background-image", "url('"+newpath+"')");
+			seconddiv.animate({opacity: 1.0}, 1500);
+		}
+		frontbackground = 1 - frontbackground;
 	}
 	newimage.src = newpath;
 }
