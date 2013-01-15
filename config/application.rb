@@ -41,10 +41,11 @@ module Tallertest
 
     # Enable the asset pipeline
     config.assets.enabled = true
+     config.assets.compress = false
+      config.assets.debug = true
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
-
 
     config.action_mailer.delivery_method = :sendmail
     config.action_mailer.smtp_settings = {:address => "smtp.gmail.com", :port => 465}
