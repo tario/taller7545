@@ -3,61 +3,14 @@
 <head>
   <title>Tallertest</title>
   <%= stylesheet_link_tag    "application" %>
-  <style>
-  #firstdiv {
-	background-image:url(<%= get_background_url %>);
-  } 
-  </style>
   <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "background.rotation.js" %>
   <%= csrf_meta_tags %>
 </head>
 
-<script>
-
-var backgroundid = 1;
-var frontbackground = 0;
-
-function next_background_image() {
-	
-	backgroundid++;
-	if (backgroundid>4) backgroundid = 1;
-	return "/background/0"+backgroundid+".jpg";
-}
-
-
-function rotate_background() {
-	var newimage = new Image();
-	var newpath = next_background_image();
-
-    newimage.onload = function() {
-		var seconddiv = $("#seconddiv");
-		var firstdiv = $("#firstdiv");
-		if (frontbackground == 1) {
-		    firstdiv.css("background-image", "url('"+newpath+"')");
-			seconddiv.animate({opacity: 0.0}, 1500);
-		} else {
-		    seconddiv.css("background-image", "url('"+newpath+"')");
-			seconddiv.animate({opacity: 1.0}, 1500);
-		}
-		frontbackground = 1 - frontbackground;
-	}
-	newimage.src = newpath;
-}
-
-window.onload = function() {
-	window.setInterval(
-		function() {
-			rotate_background();
-		},
-		5000
-	)	
-}
-
-</script>
-
 <body>
-	<div id=firstdiv>
-		<div id=seconddiv>
+	<div class=background>
+		<div>
 		</div>
 	</div>
 

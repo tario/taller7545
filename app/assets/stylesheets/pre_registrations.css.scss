@@ -5,23 +5,19 @@ body {
   height: 100%;
 }
 
-#firstdiv, #seconddiv {
+#firstdiv {
   background-size: 100% auto;
 }
 
-html, #firstdiv, #seconddiv, #lastdiv {
+html, #firstdiv, #lastdiv {
   height: 100%;
   width: 100%;
   overflow: hidden;
 }
 
-#firstdiv, #seconddiv, #lastdiv {
+#firstdiv, #lastdiv {
   position: absolute;
   top: 0px;
-}
-
-#seconddiv {
-  opacity: 0.0;
 }
 
 .icon_img {
