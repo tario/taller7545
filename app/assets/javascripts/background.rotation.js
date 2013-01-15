@@ -47,6 +47,7 @@ window.onload = function() {
 	seconddiv.css("width", "100%");
 	seconddiv.css("position", "absolute");
 	seconddiv.css("top", "0px");
+	seconddiv.css("left", "0px");
 	seconddiv.css("opacity", 0.0);
 	seconddiv.css("background-size", "100% auto");
 
