@@ -5,17 +5,17 @@ body {
   height: 100%;
 }
 
-#firstdiv {
+.background {
   background-size: 100% auto;
 }
 
-html, #firstdiv, #lastdiv {
+html, .background, #lastdiv {
   height: 100%;
   width: 100%;
   overflow: hidden;
 }
 
-#firstdiv, #lastdiv {
+.background, #lastdiv {
   position: absolute;
   top: 0px;
 }
