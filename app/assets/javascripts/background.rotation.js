@@ -1,12 +1,13 @@
-
-var backgroundid = 1;
-var frontbackground = 0;
+var background_data = {
+	background_index: 0,
+	frontbackground: 0
+};
 
 function next_background_image() {
 	
-	backgroundid++;
-	if (backgroundid>4) backgroundid = 1;
-	return "/background/0"+backgroundid+".jpg";
+	background_data.background_index++;
+	if (background_data.background_index>=background_data.background_list.length) background_data.background_index = 0;
+	return background_data.background_list[background_data.background_index];
 }
 
 
@@ -17,14 +18,14 @@ function rotate_background() {
     newimage.onload = function() {
 		var seconddiv = $(".background div");
 		var firstdiv = $(".background");
-		if (frontbackground == 1) {
+		if (background_data.frontbackground == 1) {
 		    firstdiv.css("background-image", "url('"+newpath+"')");
 			seconddiv.animate({opacity: 0.0}, 1500);
 		} else {
 		    seconddiv.css("background-image", "url('"+newpath+"')");
 			seconddiv.animate({opacity: 1.0}, 1500);
 		}
-		frontbackground = 1 - frontbackground;
+		background_data.frontbackground = 1 - background_data.frontbackground;
 	}
 	newimage.src = newpath;
 }
@@ -33,6 +34,7 @@ function add_second_div() {
 	var firstdiv = $(".background");
 	$.each(firstdiv, function(index, object) {
 			object.innerHTML = "<div></div>";
+			background_data.background_list = object.getAttribute('background-list').split(";");
 		}
 	)
 		
@@ -49,14 +51,16 @@ function add_second_div() {
 window.onload = function() {
 	var firstdiv = $(".background");
 	
+	add_second_div();
+		
 	var newpath = next_background_image();
 	firstdiv.css("background-image", "url('"+newpath+"')");
-	
+
 	window.setInterval(
 		function() {
 			rotate_background();
 		},
 		5000
 	)
-	add_second_div();
+
 }

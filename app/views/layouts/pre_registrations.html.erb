@@ -9,7 +9,8 @@
 </head>
 
 <body>
-	<div class=background>
+	<div class=background
+		background-list="<%= (1..4).map{|x| "/background/0#{x}.jpg"}.join(";") %>">
 	</div>
 
 	<div id=lastdiv>		
