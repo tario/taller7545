@@ -29,6 +29,23 @@ function rotate_background() {
 	newimage.src = newpath;
 }
 
+function add_second_div() {
+	var firstdiv = $(".background");
+	$.each(firstdiv, function(index, object) {
+			object.innerHTML = "<div></div>";
+		}
+	)
+		
+	var seconddiv = $(".background div");
+	seconddiv.css("height", "100%");
+	seconddiv.css("width", "100%");
+	seconddiv.css("position", "absolute");
+	seconddiv.css("top", "0px");
+	seconddiv.css("left", "0px");
+	seconddiv.css("opacity", 0.0);
+	seconddiv.css("background-size", "100% auto");
+}
+
 window.onload = function() {
 	var firstdiv = $(".background");
 	
@@ -40,15 +57,6 @@ window.onload = function() {
 			rotate_background();
 		},
 		5000
-	)	
-
-	var seconddiv = $(".background div");
-	seconddiv.css("height", "100%");
-	seconddiv.css("width", "100%");
-	seconddiv.css("position", "absolute");
-	seconddiv.css("top", "0px");
-	seconddiv.css("left", "0px");
-	seconddiv.css("opacity", 0.0);
-	seconddiv.css("background-size", "100% auto");
-
+	)
+	add_second_div();
 }
