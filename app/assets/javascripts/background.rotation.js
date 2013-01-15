@@ -30,6 +30,11 @@ function rotate_background() {
 }
 
 window.onload = function() {
+	var firstdiv = $(".background");
+	
+	var newpath = next_background_image();
+	firstdiv.css("background-image", "url('"+newpath+"')");
+	
 	window.setInterval(
 		function() {
 			rotate_background();
@@ -37,11 +42,12 @@ window.onload = function() {
 		5000
 	)	
 
-	$(".background div").css("height", "100%");
-	$(".background div").css("width", "100%");
-	$(".background div").css("position", "absolute");
-	$(".background div").css("top", "0px");
-	$(".background div").css("opacity", 0.0);
-	$(".background div").css("background-size", "100% auto");
+	var seconddiv = $(".background div");
+	seconddiv.css("height", "100%");
+	seconddiv.css("width", "100%");
+	seconddiv.css("position", "absolute");
+	seconddiv.css("top", "0px");
+	seconddiv.css("opacity", 0.0);
+	seconddiv.css("background-size", "100% auto");
 
 }
