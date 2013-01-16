@@ -2,6 +2,13 @@
 
 <%= form_tag('/sessions/create', :method => :get) do %>
 	<table>
+		<p><h3>Entrar con</h3></p>
+		<tr>
+				<a href='/sessions/new'><img src='/images/login/2692.jpg'></img></a>
+				<a href='/sessions/new'><img src='/images/login/facebook_logo.png'></img></a>			
+				<a href='/sessions/new'><img src='/images/login/google-logo.gif'></img></a>			
+		</tr>
+		<p><h3>Entrar con tu cuenta</h3></p>
 		<tr>
 			<td>
 			    e-mail/username:
@@ -20,9 +27,9 @@
 		</tr>
 		<tr>
 			<td>
+			    <%= submit_tag "Enviar" %><br/>
 			</td>
 			<td>
-			    <%= submit_tag "Enviar" %><br/>
 			</td>
 		</tr>
 	</table>
