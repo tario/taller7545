@@ -41,6 +41,7 @@ Tallertest::Application.routes.draw do
   match 'pre_registrations/confirm/:token' => 'pre_registrations#confirm', :as => :confirm_pre_registration
   
   resources :pre_registrations
+  resources :sessions
   # Sample resource route within a namespace:
   #   namespace :admin do
   #     # Directs /admin/products/* to Admin::ProductsController

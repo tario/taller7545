@@ -1,0 +1,31 @@
+<div class='form_container'><p>
+
+<%= form_tag('/sessions/create', :method => :get) do %>
+	<table>
+		<tr>
+			<td>
+			    e-mail/username:
+			</td>
+			<td>
+			    <%= text_field_tag :email_username %><br/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				password:
+			</td>
+			<td>
+			    <%= password_field_tag :password %><br/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			</td>
+			<td>
+			    <%= submit_tag "Enviar" %><br/>
+			</td>
+		</tr>
+	</table>
+<% end %>
+</p>
+</div>

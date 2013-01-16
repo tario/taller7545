@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tallertest</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "background.rotation.js" %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+	<div class=background
+		background-list="<%= (1..4).map{|x| "/background/0#{x}.jpg"}.join(";") %>">
+	</div>
+
+	<div id=lastdiv>		
+	  	<table>
+	  	  <tr id=uppertr>
+			<div id=uppertrdiv>
+			</div>
+	  	  </tr>
+	  	  <tr id=centertr>
+	  	  	<td id=lefttd>
+	  	  		<div id=lefttddiv>
+	  	  		</div>
+	  	  	</td>
+	  	  	<td class='icon_td'>
+			  <img class='icon_img' src='/images/valija.png'>
+			  </img>	
+			</td>
+			<td id='center_cell'>  	
+<%= yield %>
+
+			</td>
+	  	  	<td id=righttd>
+	  	  		<div id=righttddiv>
+	  	  		</div>
+	  	  	</td>
+		  </tr>
+	  	  <tr id=lowertr>
+			<div id=lowertrdiv>
+			</div>
+	  	  </tr>
+		</table>
+	</div>
+</body>
+</html>

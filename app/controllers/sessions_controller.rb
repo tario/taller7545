@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   def new
-    render :layout => "pre_registrations"
+    render :layout => "sessions"
   end
   
   def create
