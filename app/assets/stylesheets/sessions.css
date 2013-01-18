@@ -18,6 +18,10 @@ html, .background, #lastdiv {
   left: 0px;
 }
 
+table {
+  width: 100%;
+}
+
 .icon_img {
   width: 50%;
   height: auto;
