@@ -27,26 +27,12 @@ html, .background, #lastdiv {
   width: 60%;
 }
 
-#uppertrdiv {
-  height: 40%;
-}
-
 #centertr {
   height: 20%;
 }
 
 #lefttddiv {
   width: 25%;
-}
-
-.icon_td {
-text-align: center ; 
-  width: 10%;  
-}
-
-
-#center_cell{
-  width: 30%;  
 }
 
 #righttddiv {
@@ -60,7 +46,7 @@ a img {
 }
 
 #uppertrdiv {
-  height: 20%;
+  height: 25%;
 }
 
 #lefttddiv {
