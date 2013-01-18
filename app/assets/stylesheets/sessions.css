@@ -1,0 +1,81 @@
+body {
+  height: 100%;
+}
+
+.background {
+  background-size: 100% auto;
+}
+
+html, .background, #lastdiv {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.background, #lastdiv {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.icon_img {
+  width: 50%;
+  height: auto;
+}
+
+#pre_registration_email {
+  width: 60%;
+}
+
+#uppertrdiv {
+  height: 40%;
+}
+
+#centertr {
+  height: 20%;
+}
+
+#lefttddiv {
+  width: 25%;
+}
+
+.icon_td {
+text-align: center ; 
+  width: 10%;  
+}
+
+
+#center_cell{
+  width: 30%;  
+}
+
+#righttddiv {
+  width: 25%;
+}
+
+
+a img {
+  width: 50px;
+  height: 50px;
+}
+
+#uppertrdiv {
+  height: 20%;
+}
+
+#lefttddiv {
+  width: 25%;
+}
+
+.icon_td {
+text-align: center ; 
+  width: 25%;  
+}
+
+#center_cell{
+  width: 25%;  
+}
+
+.white_background {
+  background-color: white;
+}
