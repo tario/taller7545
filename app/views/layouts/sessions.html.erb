@@ -12,11 +12,12 @@
   <%= csrf_meta_tags %>
 </head>
 
-<body>
-	
 <% if mobile_device? %>
+<body style='background-image:url("<%= (1..4).map{|x| "/background/0#{x}.jpg"}.sample %>")'>	
 	<%= yield %>
+</body>
 <% else %>	
+<body>
 	<div class=background
 		background-list="<%= (1..4).map{|x| "/background/0#{x}.jpg"}.join(";") %>">
 	</div>
@@ -51,6 +52,6 @@
 	  	  </tr>
 		</table>
 	</div>
-<% end %>	
 </body>
+<% end %>	
 </html>
