@@ -20,7 +20,7 @@ Tallertest::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
-  config.assets.precompile += %w( background.rotation.js )
+  config.assets.precompile += %w( *.js *.css )
 
   # Defaults to Rails.root.join("public/assets")
   # config.assets.manifest = YOUR_PATH
