@@ -1,0 +1,18 @@
+
+a img {
+  width: 50px;
+  height: 50px;
+}
+
+.icon_td {
+text-align: center ; 
+  width: 25%;  
+}
+
+#center_cell{
+  width: 100%;  
+}
+
+.white_background {
+  background-color: white;
+}

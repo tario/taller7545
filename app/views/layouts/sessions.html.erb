@@ -2,13 +2,21 @@
 <html>
 <head>
   <title>Tallertest</title>
-  <%= stylesheet_link_tag    "application" %>
+  <% if mobile_device? %>
+    <%= stylesheet_link_tag    "sessions.mobile" %>
+  <% else %>	
+    <%= stylesheet_link_tag    "application" %>
+  <% end %>	
   <%= javascript_include_tag "application" %>
   <%= javascript_include_tag "background.rotation.js" %>
   <%= csrf_meta_tags %>
 </head>
 
 <body>
+	
+<% if mobile_device? %>
+	<%= yield %>
+<% else %>	
 	<div class=background
 		background-list="<%= (1..4).map{|x| "/background/0#{x}.jpg"}.join(";") %>">
 	</div>
@@ -43,5 +51,6 @@
 	  	  </tr>
 		</table>
 	</div>
+<% end %>	
 </body>
 </html>
