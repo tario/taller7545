@@ -4,24 +4,26 @@
 	<table>
 		<p><h3>Entrar con</h3></p>
 		<tr>
+			<div class=external_login_div>
 				<a href='/sessions/new'><img src='/images/login/2692.jpg'></img></a>
 				<a href='/sessions/new'><img src='/images/login/facebook_logo.png'></img></a>			
 				<a href='/sessions/new'><img src='/images/login/google-logo.gif'></img></a>			
+			</div>
 		</tr>
 		<p><h3>Entrar con tu cuenta</h3></p>
 		<tr>
-			<td>
+			<td class=column1>
 			    e-mail/username:
 			</td>
-			<td>
+			<td class=column2>
 			    <%= text_field_tag :email_username %><br/>
 			</td>
 		</tr>
 		<tr>
-			<td>
+			<td class=column1>
 				password:
 			</td>
-			<td>
+			<td class=column2>
 			    <%= password_field_tag :password %><br/>
 			</td>
 		</tr>
