@@ -69,3 +69,7 @@ text-align: center ;
 .white_background {
   background-color: white;
 }
+
+.flash_error {
+  color: red;
+}
