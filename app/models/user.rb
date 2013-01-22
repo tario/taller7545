@@ -27,7 +27,7 @@ class User < ActiveRecord::Base
 
   
   def self.authorize(name, password)
-    user = User.find_by_name(password)
+    user = User.find_by_name(name)
     if user
       if user.validate_password(password)
         user
