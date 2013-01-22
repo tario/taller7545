@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
   end
   
   def create
-    session[:current_user_id] = 1
+    session[:current_user_id] = User.authorize(params[:name], params[:password]).id
     redirect_to '/'
   end
 end
