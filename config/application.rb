@@ -11,15 +11,16 @@ end
 
 
 module Kernel
-  alias orig_require require
-  def require(*x)
-    ret = orig_require(*x)
+  def require_with_webrick_check(*x)
+    ret = require_without_webrick_check(*x)
     if ret and x[0] =~ /webrick\/config/
       print "webrick/config required: setting :DoNotReverseLookup = true\n" 
       WEBrick::Config::HTTP[:DoNotReverseLookup] = true
     end
     ret
   end
+
+  alias_method_chain :require, :webrick_check
 end
 
 module Tallertest
