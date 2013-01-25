@@ -9,6 +9,19 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
+
+module Kernel
+  alias orig_require require
+  def require(*x)
+    ret = orig_require(*x)
+    if ret and x[0] =~ /webrick\/config/
+      print "webrick/config required: setting :DoNotReverseLookup = true\n" 
+      WEBrick::Config::HTTP[:DoNotReverseLookup] = true
+    end
+    ret
+  end
+end
+
 module Tallertest
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
